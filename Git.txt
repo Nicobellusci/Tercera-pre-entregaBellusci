@@ -1,44 +1,20 @@
-
-1-
-# configurar entorno de Git.
-git config --list
-
-2-
+#_____Git video Coder
 # configurar variables.
 git config --global user.name "NicoBellusci" (entre comillas si el texto tiene espacios)
 git config --global user.email belluscinicolas@gmail.com
 
-#confirmar que esten bien las variables.
-git config --list
-
-3-
-git init .
-
-4-
-git add . ( espacio . indica que quiero que versione todo lo que esta adentro de la carpeta)
-
-5-
-#generar el repositorio
-
-6-
-#necesita un mensaje.
-git commint -m "Clase 16. Version 1 de Git / Github"
+git init        #sobre la carpeta raiz para versionar lo que hay
+git add .       # agrego todo con el punto
+git commit -m "Tercera-pre-entregaBellusci_v1"      # generar el repositorio / necesita un mensaje "se cargaron fomularios nuevos"
 
 Comandos importantes:
 git log #indica version, hash
-git add . #incopora datos
-
-git commint -m "Clase 16. Version 2 de Git / Github"
+git log --oneline
+    
 git checkout + hash de la version a la que quiero ir.
 git status #dice en que esta esta nuestro proyecto, identifica documentos que no estan en el repositorio
 
 git add . #agrega cambios a commitear pero luego para versionarlo hay que usar el git commit -m ""
 
 git log --oneline #muestra en linas mas limpias los hash y versiones.
-
-
-
-
-
-
 
