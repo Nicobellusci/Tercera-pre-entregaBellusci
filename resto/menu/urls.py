@@ -17,8 +17,7 @@ urlpatterns = [
     path('BurgersForm/', burgersForm, name="BurgersForm"),
     path('EmpanadasForm/', empanadasForm, name="EmpanadasForm"),
 
-    #___________________________
-
+    
     #_____BUSCAR_____
     path('buscarEntradas/', buscarEntradas, name="buscarEntradas"),
     path('encontrarEntradas/', encontrarEntradas, name="encontrarEntradas"),

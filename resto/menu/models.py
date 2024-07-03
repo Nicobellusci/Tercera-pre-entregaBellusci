@@ -1,6 +1,6 @@
 from django.db import models
 
-# Modelo del menu:
+#______Modelos del menu:
 
 class Entradas(models.Model):
     nombre = models.CharField(max_length=50)

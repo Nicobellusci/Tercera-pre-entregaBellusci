@@ -52,7 +52,7 @@ def pizzasForm(request):
         if miForm.is_valid():
             pizzas_nombre = miForm.cleaned_data.get("nombre")
             pizzas_ingredientes = miForm.cleaned_data.get("ingredientes")
-            pizzas = Entradas(nombre=pizzas_nombre, ingredientes=pizzas_ingredientes)
+            pizzas = Pizza(nombre=pizzas_nombre, ingredientes=pizzas_ingredientes)
             pizzas.save()
             contexto = {"Pizzas": Pizza.objects.all()}
             return render(request, "menu/Pizzas.html", contexto)
@@ -70,7 +70,7 @@ def burgersForm(request):
             burgers_nombre = miForm.cleaned_data.get("nombre")
             burgers_ingredientes = miForm.cleaned_data.get("ingredientes")
             burgers_tipo_pan = miForm.cleaned_data.get("tipo_pan")
-            burgers = Entradas(nombre=burgers_nombre, ingredientes=burgers_ingredientes, tipo_pan=burgers_tipo_pan)
+            burgers = Burger(nombre=burgers_nombre, ingredientes=burgers_ingredientes, tipo_pan=burgers_tipo_pan)
             burgers.save()
             contexto = {"Burgers": Burger.objects.all()}
             return render(request, "menu/Burgers.html", contexto)
@@ -87,7 +87,8 @@ def empanadasForm(request):
         if miForm.is_valid():
             empanadas_nombre = miForm.cleaned_data.get("nombre")
             empanadas_ingredientes = miForm.cleaned_data.get("ingredientes")
-            empanadas_coccion = Empanadas(nombre=empanadas_nombre, ingredientes=empanadas_ingredientes, coccion=empanadas_coccion)
+            empanadas_coccion = miForm.cleaned_data.get("coccion")
+            empanadas= Empanadas(nombre=empanadas_nombre, ingredientes=empanadas_ingredientes, coccion=empanadas_coccion)
             empanadas.save()
             contexto = {"Empanadas": Empanadas.objects.all()}
             return render(request, "menu/Empanadas.html", contexto)
@@ -97,7 +98,6 @@ def empanadasForm(request):
     
     return render(request, "menu/EmpanadasForm.html", {"form": miForm})
 
-#___________________________
 
 
 #_____BUSCAR_____
