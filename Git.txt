@@ -18,3 +18,13 @@ git add . #agrega cambios a commitear pero luego para versionarlo hay que usar e
 
 git log --oneline #muestra en linas mas limpias los hash y versiones.
 
+#______GitHub 47:31:51 velocidad x2
+
+#enlazar el Git con el que venimos manejando las versiones con GitHub.
+git remote add origin https://github.com/Nicobellusci/Tercera-pre-entregaBellusci.git
+
+#para subir a la nube - antes de eso tiene que esta todo commit, lo verifico con git status.
+#master es la rama en donde estoy.
+git push -u origin master
+
+
