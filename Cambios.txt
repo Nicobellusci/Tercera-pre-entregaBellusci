@@ -1,0 +1,3 @@
+#reemplace el inicio de index al home para poder hacer la pagina de inicio diferente al resto de los menues
+    def home(request):
+        return render(request, "menu/home.html")

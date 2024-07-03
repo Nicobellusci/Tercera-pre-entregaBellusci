@@ -1,0 +1,36 @@
+{% extends 'menu/index.html' %}
+
+
+{% block titulo %}
+<div class="masthead-heading text-uppercase">Burgers</div>
+<!--<div class="masthead-subheading">Elige tu favorita!</div>-->
+<a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">Elegí tu favorita!</a>                 
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Burger</th>
+            <th>Ingredientes</th>
+            <th>Tipo de Pan</th>
+        <tr>
+    </thead>
+    <tbody>
+    {% for b in Burgers %}
+        <tr>
+            <th>{{b.id}}</th>
+            <th>{{b.nombre}}</th>
+            <th>{{b.ingredientes}}</th>
+            <th>{{b.tipo_pan}}</th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock contenido %}
+{% block menu_contact %}
+{% endblock menu_contact %}
